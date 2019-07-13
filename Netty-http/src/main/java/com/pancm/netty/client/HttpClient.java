@@ -35,7 +35,7 @@ public class HttpClient {
                     ch.pipeline().addLast(new HttpResponseDecoder());
                     // 客户端发送的是httprequest，所以要使用HttpRequestEncoder进行编码
                     ch.pipeline().addLast(new HttpRequestEncoder());
-//                    ch.pipeline().addLast(new HttpObjectAggregator(10*1024*1024));
+                    ch.pipeline().addLast(new HttpObjectAggregator(10*1024*1024));
                     ch.pipeline().addLast(new HttpClientInboundHandler());
                 }
             });
