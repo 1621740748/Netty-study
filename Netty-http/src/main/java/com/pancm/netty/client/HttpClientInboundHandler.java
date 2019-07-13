@@ -2,13 +2,10 @@ package com.pancm.netty.client;
  
 import java.nio.charset.Charset;
 
-import com.alibaba.fastjson.JSON;
-
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.codec.http.HttpContent;
-import io.netty.handler.codec.http.HttpHeaders;
 import io.netty.handler.codec.http.HttpResponse;
  
 public class HttpClientInboundHandler extends ChannelInboundHandlerAdapter {
@@ -18,7 +15,7 @@ public class HttpClientInboundHandler extends ChannelInboundHandlerAdapter {
         if (msg instanceof HttpResponse) 
         {
             HttpResponse response = (HttpResponse) msg;
-//            System.out.println("CONTENT_TYPE:" + response.headers().get(HttpHeaders.Names.CONTENT_TYPE));
+//           s System.out.println("CONTENT_TYPE:" + response.headers().get(HttpHeaders.Names.CONTENT_TYPE));
            // System.out.println(JSON.toJSON(response));
             
         }
