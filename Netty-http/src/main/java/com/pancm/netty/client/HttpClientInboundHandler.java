@@ -18,7 +18,7 @@ public class HttpClientInboundHandler extends ChannelInboundHandlerAdapter {
         if (msg instanceof HttpResponse) 
         {
             HttpResponse response = (HttpResponse) msg;
-            System.out.println("CONTENT_TYPE:" + response.headers().get(HttpHeaders.Names.CONTENT_TYPE));
+//            System.out.println("CONTENT_TYPE:" + response.headers().get(HttpHeaders.Names.CONTENT_TYPE));
            // System.out.println(JSON.toJSON(response));
             
         }
